@@ -6,7 +6,7 @@ Kotlin·Jetpack Compose로 구현한 AAOS 차량용 앱입니다. 실제 차량 
 
 ## 화면과 시연
 
-아래 이미지는 같은 제출 소스에서 실행한 앱 화면에 짧은 설명을 붙인 안내입니다. 테스트 값과 합성 차량 입력이 포함되어 있습니다.
+대표 캐릭터인 네루로 친구 선택, 성장, 리포트와 게임 화면을 안내합니다. 테스트 값과 합성 차량 입력이 포함되어 있습니다.
 
 ![친구 선택과 홈 화면](docs/images/01-companion.png)
 ![측정 구간 리포트와 목표·회고](docs/images/02-reports.png)
@@ -16,13 +16,13 @@ Kotlin·Jetpack Compose로 구현한 AAOS 차량용 앱입니다. 실제 차량 
 
 [핵심 기능 시연 영상 보기 · MP4](docs/videos/drivy-demo.mp4) · [구간별 설명과 테스트 절차](docs/testing.md)
 
-영상은 테스트 빌드의 실제 화면 녹화입니다. 합성 입력, 직접 설정한 성장값, 화면 재생성, 새 프로세스 복원을 구분합니다. 테스트 메뉴는 release 빌드에 표시되지 않습니다.
+영상은 네루로 촬영한 기능별 앱 화면과 하단 설명으로 구성되어 있습니다. 합성 입력, 직접 설정한 성장값, 화면 재생성, 새 프로세스 복원을 구분합니다. 테스트 메뉴는 release 빌드에 표시되지 않습니다.
 
 ## 주요 기능
 
 ### 친구와 성장
 
-- 모카·누리·피코·네루·토리·라피 중 한 친구를 선택합니다. 인사·눈 깜빡임·종별 모션과 세 성장 모습을 제공합니다.
+- 모카·누리·피코·네루·네루·라피 중 한 친구를 선택합니다. 인사·눈 깜빡임·종별 모션과 세 성장 모습을 제공합니다.
 - 유효 누적 거리 증가량 1km당 기본 100XP를 얻습니다. 가감속 기반 게임 점수는 추가 보너스에 영향을 주며 기본 XP를 차감하지 않습니다.
 - 50,000XP부터 2단계, 300,000XP부터 3단계입니다. 펫·거리·XP는 기기 내부에 저장하고 앱 재실행 후 복원합니다.
 - 수신 공백·비정상 급증·역순·누적계 감소를 유효 성장으로 채우지 않습니다. 게임 점수는 실차 보정이 끝난 운전 안전 평가가 아닙니다.
@@ -47,8 +47,8 @@ Kotlin·Jetpack Compose로 구현한 AAOS 차량용 앱입니다. 실제 차량 
 
 | 파일 | 용도와 상태 |
 | --- | --- |
-| [DRIVY_demo.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_demo.apk) | 설치 가능한 별도 테스트 앱. 패키지 `io.github.silleruss.drivy.uitest`, debug 서명·테스트 메뉴 포함 |
-| [DRIVY_release-unsigned.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_release-unsigned.apk) | 서명 전 release 빌드 확인용. 서명 없이 설치할 수 없으며 최종 제출용 서명 APK가 아님 |
+| [DRIVY_demo.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_demo.apk) | 설치 가능한 별도 테스트 앱입니다. 패키지는 `io.github.silleruss.drivy.uitest`이며 debug 서명과 테스트 메뉴를 포함합니다 |
+| [DRIVY_release-unsigned.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_release-unsigned.apk) | 서명 전 release 빌드를 확인하실 수 있습니다. 서명 없이 설치할 수 없으며 최종 제출용 서명 APK는 아닙니다 |
 
 **배포 서명은 보류 상태입니다.** 공식 제출 기준의 실행 가능한 release APK 준비는 아직 완료되지 않았습니다. 키를 저장소에 넣거나 임의 배포 키를 생성하지 않습니다.
 

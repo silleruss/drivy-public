@@ -62,8 +62,8 @@ class SubmissionDemoTest {
         output.deleteRecursively(); output.mkdirs()
         ActivityScenario.launch(MainActivity::class.java).use { s ->
             ready(s)
-            capture("01-selection")
-            click("토리"); click("토리와 동행 시작")
+            click("네루"); capture("01-selection")
+            click("네루와 동행 시작")
             compose.waitUntil(10_000) { compose.onAllNodesWithText("자세히").fetchSemanticsNodes(atLeastOneRootRequired = false).isNotEmpty() }
             capture("02-home")
             click("테스트"); capture("03-test-menu")
@@ -119,14 +119,14 @@ class SubmissionDemoTest {
             compose.mainClock.autoAdvance = true
         }
         drain()
-        assertEquals(Companion.TORI, PetSaveStore(context.filesDir).load().companion)
+        assertEquals(Companion.NERU, PetSaveStore(context.filesDir).load().companion)
         File(output, "passed.txt").writeText("Core demo assertions passed. UX and vehicle samples are synthetic. Recreation is not a process restart.\n")
     }
     @Test fun captureNewProcessAndLiveStatus() {
         check(context.packageName.endsWith(".uitest"))
         org.junit.Assume.assumeTrue("Run explicitly with submission_demo=true", InstrumentationRegistry.getArguments().getString("submission_demo") == "true")
         val stored = PetSaveStore(context.filesDir).load()
-        assertEquals(Companion.TORI, stored.companion)
+        assertEquals(Companion.NERU, stored.companion)
         assertTrue(stored.experience >= 300000.0)
         ActivityScenario.launch(MainActivity::class.java).use { scenario ->
             compose.waitUntil(30_000) { compose.onAllNodesWithText("자세히").fetchSemanticsNodes(atLeastOneRootRequired = false).isNotEmpty() }
@@ -154,6 +154,7 @@ class SubmissionDemoTest {
                     SystemClock.sleep(100); dump = shell("dumpsys window windows")
                 }
                 assertTrue("Actual overlay must be visible", dump.contains(title))
+                shell("input keyevent KEYCODE_HOME")
                 SystemClock.sleep(2000)
                 instrumentation.uiAutomation.takeScreenshot().let { b ->
                     File(output, "18-small-window.png").outputStream().use { b.compress(Bitmap.CompressFormat.PNG, 100, it) }; b.recycle()
