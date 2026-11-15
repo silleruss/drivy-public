@@ -50,7 +50,7 @@ Kotlin·Jetpack Compose로 구현한 AAOS 차량용 앱입니다. 실제 차량 
 | [DRIVY_demo.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_demo.apk) | 설치 가능한 별도 테스트 앱입니다. 패키지는 `io.github.silleruss.drivy.uitest`이며 debug 서명과 테스트 메뉴를 포함합니다 |
 | [DRIVY_release-unsigned.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_release-unsigned.apk) | 서명 전 release 빌드를 확인하실 수 있습니다. 서명 없이 설치할 수 없으며 최종 제출용 서명 APK는 아닙니다 |
 
-**배포 서명은 보류 상태입니다.** 공식 제출 기준의 실행 가능한 release APK 준비는 아직 완료되지 않았습니다. 키를 저장소에 넣거나 임의 배포 키를 생성하지 않습니다.
+**최종 제출 파일명은 `이승룡_drivy_release.apk`이며, 저장소 내 제출 경로는 `apk/이승룡_drivy_release.apk`입니다.** 배포 서명은 보류 상태이므로 이 파일은 아직 준비되지 않았습니다. 키를 저장소에 넣거나 임의 배포 키를 생성하지 않습니다.
 
 APK는 GitHub의 파일당 100MB 제한을 넘어 [GitHub Releases](https://github.com/silleruss/drivy-public/releases/tag/submission-2026-11-15)에 별도로 제공합니다. `apk/SHA256SUMS`로 다운로드한 파일을 확인할 수 있습니다.
 

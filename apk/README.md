@@ -7,3 +7,5 @@ APK 크기가 GitHub의 파일당 100MB 제한을 넘어 바이너리는 [GitHub
 - `SHA256SUMS`: 두 파일의 SHA-256. 다운로드한 APK를 이 폴더에 두고 `shasum -a 256 -c SHA256SUMS`로 확인합니다. APK 바이너리는 Git에서 제외됩니다.
 
 소유자 관리 키로 서명한 뒤 설치·복원·인증서 확인을 마쳐야 공식 실행 가능한 release APK로 제출할 수 있습니다. debug 서명을 배포 서명으로 표시하지 않습니다.
+
+최종 제출용 파일명은 `이승룡_drivy_release.apk`이고, 저장소에 올릴 경우 경로는 `apk/이승룡_drivy_release.apk`입니다. 서명 후 설치를 확인해 준비합니다. GitHub의 파일 크기 제한을 넘으면 동일한 파일명으로 GitHub Releases에 올리고 해당 Release 주소를 제출합니다.
