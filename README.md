@@ -47,12 +47,13 @@ Kotlin·Jetpack Compose로 구현한 AAOS 차량용 앱입니다. 실제 차량 
 
 | 파일 | 용도와 상태 |
 | --- | --- |
+| [drivy-signed-release.zip](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/drivy-signed-release.zip) | 서명된 제출용 APK `이승룡_drivy_release.apk`가 들어 있습니다. 압축을 풀어 사용하세요. |
 | [DRIVY_demo.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_demo.apk) | 설치 가능한 별도 테스트 앱입니다. 패키지는 `io.github.silleruss.drivy.uitest`이며 debug 서명과 테스트 메뉴를 포함합니다 |
 | [DRIVY_release-unsigned.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_release-unsigned.apk) | 서명 전 release 빌드를 확인하실 수 있습니다. 서명 없이 설치할 수 없으며 최종 제출용 서명 APK는 아닙니다 |
 
-**최종 제출 파일명은 `이승룡_drivy_release.apk`이며, 저장소 내 제출 경로는 `apk/이승룡_drivy_release.apk`입니다.** 배포 서명은 보류 상태이므로 이 파일은 아직 준비되지 않았습니다. 키를 저장소에 넣거나 임의 배포 키를 생성하지 않습니다.
+**제출 파일명은 `이승룡_drivy_release.apk`입니다.** 서명과 인증서 검증을 마쳤으며 별도 환경에서의 설치·재실행 검증은 아직 완료하지 않았습니다. 키는 저장소에 포함하지 않습니다.
 
-APK는 GitHub의 파일당 100MB 제한을 넘어 [GitHub Releases](https://github.com/silleruss/drivy-public/releases/tag/submission-2026-11-15)에 별도로 제공합니다. `apk/SHA256SUMS`로 다운로드한 파일을 확인할 수 있습니다.
+서명된 APK는 GitHub의 파일당 100MB 제한을 넘어 [GitHub Releases](https://github.com/silleruss/drivy-public/releases/tag/submission-2026-11-15)에 별도로 제공합니다. GitHub가 한글 파일명을 변경하므로, ZIP을 내려받아 압축을 풀면 요청하신 `이승룡_drivy_release.apk`를 얻을 수 있습니다. `apk/SHA256SUMS`로 APK를 확인할 수 있습니다.
 
 ### 준비 환경
 
@@ -112,7 +113,7 @@ source scripts/android-env.sh
 
 [테스트 화면으로 확인하는 단계·기대 결과·저장 영향](docs/testing.md)을 제공합니다. 시연 녹화의 차량·UX 합성 입력은 실차 보정이나 전체 주행 수집 검증을 대신하지 않습니다.
 
-미검증 범위는 실차별 신호 주기·이벤트 임계값, OEM별 수명주기·작은 창 정책, 자동 습관 분석 효과, 최신 버전의 장시간 운용과 배포 서명입니다. Virtual Console 연결이 비활성인 경우 실제 SDK 값 변경 검사는 재시도 대상으로 남깁니다.
+미검증 범위는 실차별 신호 주기·이벤트 임계값, OEM별 수명주기·작은 창 정책, 자동 습관 분석 효과, 최신 버전의 장시간 운용과 서명된 APK의 독립 설치입니다. Virtual Console 연결이 비활성인 경우 실제 SDK 값 변경 검사는 재시도 대상으로 남깁니다.
 
 ## 소스 구성과 권리
 

@@ -149,7 +149,7 @@ adb shell am instrument --user 10 -w -r -e submission_demo true \
 | debug / uitest / unsigned release 빌드 | 성공 |
 | debug / release lint | 오류 0, 각각 경고 19 |
 | 정상 앱 펫 저장 | 검사 전후 SHA-256 동일 |
-| 제출 release 서명 | 보류, 미완료 |
+| 제출 release 서명 | v3 서명과 인증서 검증 완료. 독립 설치·복원 검증은 미완료 |
 | 실차·OEM·최신 버전 장시간 운용 | 미검증 |
 
 최초 핵심 시연에서는 자동 테스트 시계가 게임을 진행시켜 점프 전에 게임이 끝났습니다. 시연의 러너 구간만 시간을 명시적으로 제어하도록 고친 뒤 재검사했습니다. 작은 창 복귀 검사에서는 Activity 복귀 중 Compose 루트가 아직 없는 순간을 기다리지 못했으며, 루트가 나타날 때까지 기다리도록 검사 코드를 고친 뒤 통과했습니다. 제품의 제한·검증 로직은 변경하지 않았습니다.
