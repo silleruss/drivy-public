@@ -200,7 +200,7 @@ private fun CompanionContent(totalKm: Double, experience: Double, drivingScore: 
                     Text("차량 연결", color = Mint, fontSize = 22.sp, fontWeight = FontWeight.Bold)
                     Text(dataStatus, color = Cream, fontSize = 20.sp)
                     Text("저장 상태", color = Mint, fontSize = 22.sp, fontWeight = FontWeight.Bold)
-                    Text(storageNotice ?: "친구와 경험치를 이 기기에 저장해요", color = Cream, fontSize = 20.sp)
+                    Text(storageNotice ?: "펫과 경험치를 이 기기에 저장해요", color = Cream, fontSize = 20.sp)
                     }
                     TextButton(onClick = { details = false }, modifier = Modifier.align(Alignment.End).heightIn(min = 56.dp)) {
                         Text("닫기", fontSize = 22.sp)

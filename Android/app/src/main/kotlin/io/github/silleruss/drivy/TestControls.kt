@@ -99,7 +99,7 @@ internal fun TestControls(progress: PetProgress, storage: String, writable: Bool
                         TestNumber("운전 감점", penalty) { penalty = it }
                         Button(onClick = { apply(progress.experience.toString(), km, penalty, progress.companion) }, enabled = writable) { Text("차량 데이터 값 적용") }
                         Text("이동 거리와 시간으로 성장 확인")
-                        Text("출처: 직접 입력한 합성 데이터 · 실제 SDK 검사 아님 · 현재 친구의 기록에 저장하지 않습니다.")
+                        Text("출처: 직접 입력한 합성 데이터 · 실제 SDK 검사 아님 · 현재 펫의 기록에 저장하지 않습니다.")
                         TestNumber("이동 거리 km (0~100)", inputDistance) { inputDistance = it }
                         TestNumber("이동 시간 초 (1~1800)", inputSeconds) { inputSeconds = it }
                         Button(onClick = {

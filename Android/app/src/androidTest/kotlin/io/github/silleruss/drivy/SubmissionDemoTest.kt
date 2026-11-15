@@ -154,14 +154,13 @@ class SubmissionDemoTest {
                     SystemClock.sleep(100); dump = shell("dumpsys window windows")
                 }
                 assertTrue("Actual overlay must be visible", dump.contains(title))
-                shell("input keyevent KEYCODE_HOME")
                 SystemClock.sleep(2000)
                 instrumentation.uiAutomation.takeScreenshot().let { b ->
                     File(output, "18-small-window.png").outputStream().use { b.compress(Bitmap.CompressFormat.PNG, 100, it) }; b.recycle()
                 }
                 File(output, "scenes.tsv").appendText("${SystemClock.elapsedRealtime()}\t18-small-window\n")
                 SystemClock.sleep(5000)
-                val window = dump.substringAfter(title).substringBefore("Window #")
+                val window = shell("dumpsys window windows").substringAfter(title).substringBefore("Window #")
                 val frame = Regex(" frame=\\[(-?\\d+),(-?\\d+)\\]\\[(-?\\d+),(-?\\d+)\\]").find(window)!!
                 val (left, top, right, bottom) = frame.groupValues.drop(1).map(String::toInt)
                 shell("input tap ${(left + right) / 2} ${(top + bottom) / 2}")

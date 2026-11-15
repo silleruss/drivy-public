@@ -23,7 +23,7 @@ internal fun CompanionSetup(storageStatus: String, onChoose: (Companion) -> Unit
             Column(Modifier.widthIn(max = 960.dp).verticalScroll(rememberScrollState()).padding(24.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 Text("처음 함께할 드라이비를 골라주세요", fontSize = 28.sp)
-                Text("선택한 친구가 운전 경험과 함께 자라요. 선택 후에는 같은 친구와 계속 동행해요.", fontSize = 20.sp)
+                Text("선택한 펫이 운전 경험과 함께 자라요. 선택 후에는 같은 펫과 계속 동행해요.", fontSize = 20.sp)
                 for (companion in Companion.entries) {
                     val isSelected = selected == companion
                     OutlinedButton(onClick = { selected = companion }, modifier = Modifier.fillMaxWidth().heightIn(min = 100.dp)
@@ -37,7 +37,7 @@ internal fun CompanionSetup(storageStatus: String, onChoose: (Companion) -> Unit
                         }
                     }
                 }
-                if (storageStatus == "save_failed") Text("저장하지 못했어요. 친구를 다시 선택해 저장해 주세요.", fontSize = 20.sp,
+                if (storageStatus == "save_failed") Text("저장하지 못했어요. 펫을 다시 선택해 저장해 주세요.", fontSize = 20.sp,
                     modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite })
                 Button(onClick = { onChoose(selected) }, modifier = Modifier.fillMaxWidth().heightIn(min = 76.dp)) {
                     Text("${selected.displayName}와 동행 시작", fontSize = 24.sp)

@@ -27,7 +27,7 @@ class CompanionSetupTest {
         val status = mutableStateOf("new")
         compose.setContent { CompanionSetup(status.value) {} }
         compose.runOnIdle { status.value = "save_failed" }
-        compose.onNodeWithText("저장하지 못했어요. 친구를 다시 선택해 저장해 주세요.")
+        compose.onNodeWithText("저장하지 못했어요. 펫을 다시 선택해 저장해 주세요.")
             .assert(SemanticsMatcher.expectValue(SemanticsProperties.LiveRegion, LiveRegionMode.Polite))
     }
 
