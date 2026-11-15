@@ -1,0 +1,15 @@
+.DS_Store
+/.idea/
+/work/
+/Android/.gradle/
+/Android/.kotlin/
+/Android/.idea/
+/Android/local.properties
+/Android/**/build/
+*.keystore
+*.jks
+*.docx
+*.pdf
+*.pem
+*.p12
+/apk/*.apk
