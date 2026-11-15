@@ -3,6 +3,7 @@
 APK 크기가 GitHub의 파일당 100MB 제한을 넘어 바이너리는 [GitHub Releases](https://github.com/silleruss/drivy-public/releases/tag/submission-2026-11-15)에 제공합니다.
 
 - [drivy-signed-release.zip](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/drivy-signed-release.zip): 서명된 `이승룡_drivy_release.apk`가 들어 있습니다. GitHub가 한글 자산명을 변경하므로 ZIP을 압축 해제해 사용하세요. 서명 검증은 통과했고 독립 설치 검증은 아직 완료하지 않았습니다.
+- [서명된 APK 직접 다운로드](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/_drivy_release.apk): GitHub가 변경한 파일명은 `_drivy_release.apk`입니다. ZIP에 포함된 APK와 바이트가 같습니다.
 - [DRIVY_demo.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_demo.apk): uitest 빌드, Android debug 인증서로 서명. 패키지 `io.github.silleruss.drivy.uitest`. 정상 앱과 저장 경로가 분리되며 테스트 메뉴를 제공합니다.
 - [DRIVY_release-unsigned.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_release-unsigned.apk): release 빌드, 서명 없음. 이 파일은 그대로 설치할 수 없습니다. 서명된 제출용 APK는 위 ZIP에 들어 있습니다.
 - `SHA256SUMS`: 세 APK의 SHA-256. 다운로드한 APK를 이 폴더에 두고 `shasum -a 256 -c SHA256SUMS`로 확인합니다. APK 바이너리는 Git에서 제외됩니다.
