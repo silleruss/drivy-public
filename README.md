@@ -47,14 +47,14 @@ Kotlin·Jetpack Compose로 구현한 AAOS 차량용 앱입니다. 실제 차량 
 
 | 파일 | 용도와 상태 |
 | --- | --- |
-| [drivy-signed-release.zip](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/drivy-signed-release.zip) | 서명된 제출용 APK `이승룡_drivy_release.apk`가 들어 있습니다. 압축을 풀어 사용하세요. |
-| [서명된 APK 직접 다운로드](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/_drivy_release.apk) | GitHub가 파일명을 `_drivy_release.apk`로 변경합니다. ZIP 안의 APK와 내용이 같습니다. |
-| [DRIVY_demo.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_demo.apk) | 설치 가능한 별도 테스트 앱입니다. 패키지는 `io.github.silleruss.drivy.uitest`이며 debug 서명과 테스트 메뉴를 포함합니다 |
-| [DRIVY_release-unsigned.apk](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_release-unsigned.apk) | 서명 전 release 빌드를 확인하실 수 있습니다. 서명 없이 설치할 수 없으며 최종 제출용 서명 APK는 아닙니다 |
+| [drivy-signed-release.zip](https://github.com/silleruss/drivy-public/releases/download/v0.2.0/drivy-signed-release.zip) | 서명된 제출용 APK `이승룡_drivy_release.apk`가 들어 있습니다. 압축을 풀어 사용하세요. |
+| [서명된 APK 직접 다운로드](https://github.com/silleruss/drivy-public/releases/download/v0.2.0/_drivy_release.apk) | GitHub가 파일명을 `_drivy_release.apk`로 변경합니다. ZIP 안의 APK와 내용이 같습니다. |
+| [DRIVY_demo.apk](https://github.com/silleruss/drivy-public/releases/download/v0.2.0/DRIVY_demo.apk) | 설치 가능한 별도 테스트 앱입니다. 패키지는 `io.github.silleruss.drivy.uitest`이며 debug 서명과 테스트 메뉴를 포함합니다 |
+| [DRIVY_release-unsigned.apk](https://github.com/silleruss/drivy-public/releases/download/v0.2.0/DRIVY_release-unsigned.apk) | 서명 전 release 빌드를 확인하실 수 있습니다. 서명 없이 설치할 수 없으며 최종 제출용 서명 APK는 아닙니다 |
 
 **제출 파일명은 `이승룡_drivy_release.apk`입니다.** 서명과 인증서 검증을 마쳤으며 별도 환경에서의 설치·재실행 검증은 아직 완료하지 않았습니다. 키는 저장소에 포함하지 않습니다.
 
-서명된 APK는 GitHub의 파일당 100MB 제한을 넘어 [GitHub Releases](https://github.com/silleruss/drivy-public/releases/tag/submission-2026-11-15)에 별도로 제공합니다. GitHub가 한글 파일명을 변경하므로, ZIP을 내려받아 압축을 풀면 요청하신 `이승룡_drivy_release.apk`를 얻을 수 있습니다. `apk/SHA256SUMS`로 APK를 확인할 수 있습니다.
+서명된 APK는 GitHub의 파일당 100MB 제한을 넘어 [GitHub Releases](https://github.com/silleruss/drivy-public/releases/tag/v0.2.0)에 별도로 제공합니다. GitHub가 한글 파일명을 변경하므로, ZIP을 내려받아 압축을 풀면 요청하신 `이승룡_drivy_release.apk`를 얻을 수 있습니다. `apk/SHA256SUMS`로 APK를 확인할 수 있습니다.
 
 ### 준비 환경
 
@@ -79,7 +79,7 @@ Kotlin·Jetpack Compose로 구현한 AAOS 차량용 앱입니다. 실제 차량 
 export ANDROID_HOME="$HOME/Library/Android/sdk"  # 실제 SDK 경로로 변경
 source scripts/android-env.sh
 adb devices
-curl -fL https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_demo.apk -o apk/DRIVY_demo.apk
+curl -fL https://github.com/silleruss/drivy-public/releases/download/v0.2.0/DRIVY_demo.apk -o apk/DRIVY_demo.apk
 adb -s emulator-5554 install -r apk/DRIVY_demo.apk
 adb -s emulator-5554 shell am start --user current \
   -n io.github.silleruss.drivy.uitest/io.github.silleruss.drivy.MainActivity

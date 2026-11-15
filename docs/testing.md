@@ -4,7 +4,7 @@
 
 2026-11-15, Pleos Connect 2.1.0 / API 34 ARM64, 2560×1440px·160dpi 분할 창에서 확인했습니다. 정상 앱과 분리된 `io.github.silleruss.drivy.uitest`를 사용합니다. 테스트 메뉴는 debug·uitest 전용입니다. release에는 표시되지 않습니다.
 
-테스트 APK: [`DRIVY_demo.apk`](https://github.com/silleruss/drivy-public/releases/download/submission-2026-11-15/DRIVY_demo.apk). 설치는 루트 README를 따릅니다. 실제 저장값 변경·초기화가 포함된 검사는 기존 사용자 앱에서 실행하지 않습니다.
+테스트 APK: [`DRIVY_demo.apk`](https://github.com/silleruss/drivy-public/releases/download/v0.2.0/DRIVY_demo.apk). 설치는 루트 README를 따릅니다. 실제 저장값 변경·초기화가 포함된 검사는 기존 사용자 앱에서 실행하지 않습니다.
 
 ## 시연 영상
 
